@@ -1,0 +1,20 @@
+.Login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.Login-logo {
+  width: 100%;
+  object-fit: contain;
+}
+
+.Login-button {
+  padding: 20px;
+  background-color: #1db954;
+  border-radius: 99px;
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
