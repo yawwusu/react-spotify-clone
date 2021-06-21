@@ -1,8 +1,66 @@
 .Footer {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center;  */
   position: fixed;
   bottom: 0;
   height: 65px;
-  width: 100vw;
+  width: 97vw;
   padding: 10px;
   background-color: #282828;
+}
+
+.Footer-left {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  color: white;
+  /* width: 300px; */
+}
+
+.Footer-center {
+  flex: 0.4;
+  display: flex;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: white;
+  justify-content: space-between;
+  max-width: 300px;
+}
+
+.Footer-right {
+  flex: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.Footer-right * .MuiSlider-root {
+  color: green;
+}
+.Footer-albumLogo {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  object-fit: contain;
+}
+
+.Footer-songInfo > h4 {
+  margin-bottom: 5px;
+}
+
+.Footer-green {
+  color: #1ed15e;
+}
+
+.Footer-icon:hover,
+.Footer-green:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.2) !important;
+}
+
+.Footer-songInfo > p {
+  font-size: 12px;
 }
