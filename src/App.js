@@ -7,7 +7,7 @@ import { useStateContext } from "./StateProvider";
 import { spotify } from "./spotify";
 
 function App() {
-  const [{ user, token }, dispatch] = useStateContext();
+  const [{ token }, dispatch] = useStateContext();
 
   React.useEffect(() => {
     const hash = getTokenFromUrl();
@@ -33,7 +33,6 @@ function App() {
       });
 
       spotify.getPlaylist("37i9dQZEVXcO7mGuhdePUr").then((response) => {
-        console.log("response", response);
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,

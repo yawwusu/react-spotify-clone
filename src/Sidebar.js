@@ -6,7 +6,7 @@ import { useStateContext } from "./StateProvider";
 
 function Sidebar() {
   const [{ playlists }, dispatch] = useStateContext();
-  console.log("playlists", playlists);
+
   return (
     <div className="Sidebar">
       <img
