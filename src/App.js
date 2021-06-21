@@ -2,11 +2,9 @@ import React from "react";
 import Login from "./Login";
 import "./App.css";
 import { getTokenFromUrl } from "./spotify";
-import SpotifyWebApi from "spotify-web-api-js";
 import Dashboard from "./Dashboard";
 import { useStateContext } from "./StateProvider";
-
-const spotify = new SpotifyWebApi();
+import { spotify } from "./spotify";
 
 function App() {
   const [{ user, token }, dispatch] = useStateContext();
@@ -33,14 +31,18 @@ function App() {
           playlists: playlists.items,
         });
       });
+
+      spotify.getPlaylist("37i9dQZEVXcO7mGuhdePUr").then((response) => {
+        console.log("response", response);
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        });
+      });
     }
   }, [dispatch]);
 
-  return (
-    <div className="App">
-      {!!token ? <Dashboard spotify={spotify} /> : <Login />}
-    </div>
-  );
+  return <div className="App">{!!token ? <Dashboard /> : <Login />}</div>;
 }
 
 export default App;

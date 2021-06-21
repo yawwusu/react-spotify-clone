@@ -4,7 +4,7 @@ import Body from "./Body";
 import Footer from "./Footer";
 import "./Dashboard.css";
 
-function Dashboard({ spotify }) {
+function Dashboard() {
   return (
     <div className="Dashboard">
       <div className="Dashboard-body">
