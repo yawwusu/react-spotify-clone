@@ -8,9 +8,21 @@
   padding-right: 10px;
 }
 
+.Sidebar > hr {
+  height: 1px;
+  border: none;
+  background-color: gray;
+}
+
 .Sidebar-logo {
   object-fit: contain;
   height: 70px;
   margin-right: auto;
   padding: 10px;
+}
+
+.Sidebar-title {
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 5px;
 }

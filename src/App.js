@@ -10,8 +10,6 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   const [{ user, token }, dispatch] = useStateContext();
-  console.log("user ", user);
-  console.log("token ", token);
 
   React.useEffect(() => {
     const hash = getTokenFromUrl();
@@ -27,6 +25,12 @@ function App() {
         dispatch({
           type: "SET_USER",
           user: user,
+        });
+      });
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists.items,
         });
       });
     }
