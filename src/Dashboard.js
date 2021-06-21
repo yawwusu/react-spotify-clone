@@ -1,10 +1,19 @@
 import React from "react";
+import Sidebar from "./Sidebar";
+import Body from "./Body";
+import Footer from "./Footer";
 import "./Dashboard.css";
 
-function Dashboard() {
+function Dashboard({ spotify }) {
   return (
-    <div>
-      <h1>Welcom to Spotify</h1>
+    <div className="Dashboard">
+      <div className="Dashboard-body">
+        <Sidebar />
+        <Body />
+      </div>
+      <div className="Dashboard-footer">
+        <Footer />
+      </div>
     </div>
   );
 }

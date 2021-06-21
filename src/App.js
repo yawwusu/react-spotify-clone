@@ -32,7 +32,11 @@ function App() {
     }
   }, [dispatch]);
 
-  return <div className="App">{!!token ? <Dashboard /> : <Login />}</div>;
+  return (
+    <div className="App">
+      {!!token ? <Dashboard spotify={spotify} /> : <Login />}
+    </div>
+  );
 }
 
 export default App;
